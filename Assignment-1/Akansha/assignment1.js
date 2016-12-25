@@ -112,12 +112,9 @@ td11.setAttribute('colspan','2');
 tr6.appendChild(td11);
 
 var submit = document.createElement('input');
-submit.setAttribute('type','button');
+submit.setAttribute('type','submit');
 submit.setAttribute('value','REGISTER');
-submit.setAttribute('onclick','alert("Thanks! You are registered!!")');
 td11.appendChild(submit);
-
-
 
 
 
