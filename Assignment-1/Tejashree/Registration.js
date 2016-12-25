@@ -61,5 +61,4 @@ divId.appendChild(sElement);
 sElement = document.createElement("input");
 sElement.setAttribute("type", "submit");
 sElement.setAttribute("value", "Submit");
-sElement.setAttribute("formNoValidate","false");
 divId.appendChild(sElement);
