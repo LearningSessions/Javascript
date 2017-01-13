@@ -1,0 +1,46 @@
+Try it yourself examples:
+----------------------------------------------------------
+1. 
+function add (a,b)
+{
+     return a+b;
+}
+//To Try
+var add = new add();
+//To Try
+var add = add();
+2. 
+function add (a,b)
+{
+     return a+b;
+}
+//To Try
+var a = new add();
+a.addtwo = function(a,b,c)
+                     {
+                      return a+b+c;
+                      }
+
+var b= new add();
+b.addtwo();
+//To Try
+var a = new add();
+a.prototype.addtwo = function(a,b,c)
+                                         {
+                                               return a+b+c;
+                                          }
+var b= new add();
+b.addtwo();
+
+3.
+function add (a,b)
+{
+     return a+b;
+}
+var a= new add();
+a.prototype.add = function(a,b,c)
+                                 {
+                                               return a+b+c;
+                                  }
+a.add(2,3,5);
+--------------------------------------------------------------
