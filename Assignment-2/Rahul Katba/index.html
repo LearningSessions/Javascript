@@ -1,0 +1,50 @@
+<html>
+<head><title>Assignment 2</title></head>
+<body>
+<script>
+	//1.
+	function add (a,b){
+		 return a+b;
+	}
+	//To Try
+	//Result: It will create the opject of function add{}
+	//var add = new add();
+	
+	//To Try
+	//Result: Uncaught TypeError: add is not a function
+	//var add = add();
+
+	//2. 
+	//To Try
+	//Result: Uncaught TypeError: b.addtwo is not a function
+	/*var a = new add();
+	a.addtwo = function(a,b,c){
+		return a+b+c;
+	}
+	var b= new add();
+	//It will throw the error at the below line
+	b.addtwo();*/
+	
+	//To Try
+	//Result: Uncaught TypeError: Cannot set property 'addtwo' of undefined
+	/*var a = new add();
+	//It will throw the error at the below line.
+	a.prototype.addtwo = function(a,b,c){
+	   return a+b+c;
+	}
+	
+	var b = new add();
+	b.addtwo();*/
+
+	//3.
+	//Result: Uncaught TypeError: Cannot set property 'add' of undefined
+	/*var a= new add();
+	//It will throw the error at the below line.
+	a.prototype.add = function(a,b,c){
+	   return a+b+c;
+	}
+	a.add(2,3,5);*/
+</script>
+</body>
+</html>
+
