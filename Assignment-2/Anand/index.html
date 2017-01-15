@@ -1,0 +1,49 @@
+
+<html>
+<head><title>Assignment 2</title></head>
+<body>
+<script>
+	function add (a,b){
+		 return a+b;
+	}
+	
+	// Demo 1:
+	//var add = new add();
+	//console.log(add);
+	//Output =  Object add{}
+
+	
+	//Demo 2 : 
+	//var add = add();
+	//console.log(add);
+	//Output:  NaN (Weird global Object)
+	
+
+	//Demo 3 : 
+	// var a = new add();
+	// a.addtwo = function(a,b,c){
+	// 	return a+b+c;
+	// }
+	// var b= new add();
+	// b.addtwo();
+	//Output: Uncaught TypeError: b.addtwo is not a function
+	
+	// Demo 4 : 
+	// var a = new add();
+	// a.prototype.addtwo = function(a,b,c){
+	//    return a+b+c;
+	// }
+	
+	// var b = new add();
+	// b.addtwo();
+	// Output : Uncaught TypeError: Cannot set property 'addtwo' of undefined
+
+	// Demo 4 : 
+	// var a= new add();
+	// a.prototype.add = function(a,b,c){
+	//    return a+b+c;
+	// }
+	// a.add(2,3,5);
+	//Output : Uncaught TypeError: Cannot set property 'add' of undefined
+</script>
+</body>
