@@ -1,0 +1,61 @@
+<!-- 
+Author : Vicky Thakkar
+Assignment : 2
+Try it yourself examples:
+-->
+<!DOCTYPE html>
+<html>
+<head><title>Assignment 2</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container"><br>
+<div class="row">
+	<div class="col-lg-4">
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#one">ONE</button><br><br>
+			<div id="one" class="collapse">
+				<span>function add (a,b) {</span><br>
+				<span>&nbsp;&nbsp;return a+b;</span><br>
+				<span>&nbsp;}</span><br><br>
+				<span>var add = new add();</span><br>
+				<span>Output: It will create the object of function add()</span><br><br>
+				<span>var add = add();</span><br>
+				<span>Output: Uncaught TypeError: add is not a function</span><br>
+			</div>		
+	</div>
+	<div class="col-lg-4">
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#two">Two</button><br><br>
+			<div id="two" class="collapse">
+				<span>var a = new add();</span><br>
+				<span>a.addtwo = function(a,b,c){</span><br>
+				<span>&nbsp;return a+b+c;</span><br>
+				<span>}</span><br>
+				<span>var b = new add();</span><br>
+				<span>b.addtwo();</span><br>
+				<span>Output : Uncaught TypeError: b.addtwo is not a function</span><br><br>
+				<span>var a = new add();</span><br>
+				<span>a.prototype.addtwo = function(a,b,c) {</span><br>
+				<span>&nbsp;return a+b+c;</span><br>
+				<span>}</span><br>
+				<span>var b = new add();</span><br>
+				<span>b.addtwo();</span><br>
+				<span>Output: Uncaught TypeError: Cannot set property 'addtwo' of undefined</span><br>
+			</div>		
+	</div>
+	<div class="col-lg-4">
+		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#three">THREE</button><br><br>
+			<div id="three" class="collapse">
+				<span>var a= new add();</span><br>
+				<span>a.prototype.add = function(a,b,c) {</span><br>
+				<span>&nbsp;return a+b+c;</span><br>
+				<span>}</span><br>
+				<span>a.add(2,3,5);</span><br>
+				<span>Output: Uncaught TypeError: Cannot set property 'add' of undefined</span><br>
+			</div>		
+	</div>
+</div>
+</div>
+</body>
+</html>
